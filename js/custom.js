@@ -19,20 +19,20 @@ jQuery(document).ready(function($) {
 
 
 	function validate(params) {
-		if(params.attr('name')== 'email'){
+		if(params.attr('validate')== 'email'){
 			return validate_email(params)
 		}
 
-		if(params.attr('name')== 'number'){
+		if(params.attr('validate')== 'number'){
 			return validate_number(params);
 		}																											
-		if(params.attr('name')== 'url'){
+		if(params.attr('validate')== 'url'){
 			return validate_url(params);
 		}
-		if(params.attr('name')== 'name'){
+		if(params.attr('validate')== 'name'){
 			return validate_name(params);
 		}
-		if(params.attr('name')== 'password'){
+		if(params.attr('validate')== 'password'){
 			return true;
 		}
 	}
