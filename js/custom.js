@@ -3,22 +3,37 @@
 jQuery(document).ready(function($) {
 	$('#frm input').keyup(function (e) { 
 		 var th = $(this);
-		 console.log(validate(th));
-	
+		 if(validate(th)){
+			 if(th.hasClass('invalid'))
+			 	th.removeClass('invalid');
+			 if(!th.hasClass('valid'))
+			 	th.addClass('valid');
+		 }else{
+			if(th.hasClass('valid'))
+			 	th.removeClass('valid');
+			 if(!th.hasClass('invalid'))
+			 	th.addClass('invalid');
+		 }
 	});
+
+
+
 	function validate(params) {
-		if(params.attr('class')== 'email'){
+		if(params.attr('name')== 'email'){
 			return validate_email(params)
 		}
 
-		if(params.attr('class')== 'number'){
+		if(params.attr('name')== 'number'){
 			return validate_number(params);
 		}																											
-		if(params.attr('class')== 'url'){
+		if(params.attr('name')== 'url'){
 			return validate_url(params);
 		}
-		if(params.attr('class')== 'name'){
+		if(params.attr('name')== 'name'){
 			return validate_name(params);
+		}
+		if(params.attr('name')== 'password'){
+			return true;
 		}
 	}
 	function validate_email(params) {
