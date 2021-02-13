@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 		}
 	}
 	function validate_email(params) {
-		var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		var pattern = /^[\w]+[\.\w-]*@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/gm;
 		return pattern.test(params.val())
 	}
 	function validate_number(params) {
