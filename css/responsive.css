@@ -1,0 +1,33 @@
+@media (max-width:575px) {
+    .toparea {
+        text-align: center;
+    }
+}
+@media (max-width:1199px){
+    .searcharea input { 
+        width: 78%;
+    }
+    .footbax form input[type="text"] {
+        width: 73%;
+    }
+
+}
+@media (max-width:767px) {
+    .logoarea {
+        text-align: center;
+    }
+    .logoarea img {
+        float: none;
+    }
+    .logoarea h1 {
+        padding: 0 0 6px 0;
+    }
+    .mainmenuarea ul li a {
+        padding: 10px 10px;
+    }
+}
+@media (max-width:991px) {
+    .sidebox{
+        width: 100%;
+    }
+}

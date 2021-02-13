@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff') format('woff');
+}
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: vazir;
+    background-color:#a0ffef;
+}
+form {
+    padding: 5px;
+    margin-top: 10px;
+}
+form input:focus , form input:active{
+    outline: none;
+}
+.valid {
+    border: 3px solid #c4ff8c;
+}
+.invalid {
+    border: 3px solid #ffa78c;
+}
